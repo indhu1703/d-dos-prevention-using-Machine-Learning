@@ -1,0 +1,281 @@
+<html>
+  <title>
+    Register here
+  </title>
+
+<div class="ripple">
+<div class="login-box">
+  <h2>Fill your details</h2>
+    <form action="datas.php" method="post" autocomplete="off">
+      <div class="temp">
+        <input name="username" type="text" id="disable-pwd-mgr-1" style="display: none;" value="username" />
+        <input id="disable_autofill1" name="disable_autofill1" style="height:0; width:0; background:transparent; border:none;padding:0.3px;margin:0;display:block;" type="password">
+      </div>
+      <div class="user-box">
+        <input type="text" name="rname" required="">
+        <label>Name</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="rregno" required="">
+        <label>Reg no</label>
+      </div>
+      <div class="user-box">
+        <input type="number" name="rusername" required="">
+        <label>Aadhar number</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="rpassword" required="">
+        <label>ERP-password</label>
+      </div>
+      <div class="user-box">
+        <input type="email" name="remail" required="">
+        <label>Email</label>
+      </div>
+      
+      <div class="submit-button" style="text-align: center;">
+        <input type="submit" value="submit" name="submit">
+      </div>
+      
+    </form>
+    <div class="readme">
+      <button class="button" onclick="show('popup')">Read me</button>
+      <div class="popup" id="popup">
+        <p>Hello</p>
+        <p>This is a website to fill your mcqs using automated tools</p>
+        <p>Every person can use this service free for one subject</p>
+        <p>If you need more than one subject you can go to the paid service</p>
+        <p>The paid service costs you 10 rupees per subject</p>
+        <p>Every paid user can avail the free subject also, the price will be automatically reduced from your amount</p>
+        <p>for any queries contact the below gmail</p>
+        <a style="color: #000000;text-decoration: none;" href="mailto: mcqautofill@gmail.com">mcqautofill@gmail.com</a><br><br><br>
+        <a style="color: #1d3bbd;text-decoration: none;" href="#" onclick="hide('popup')">Close</a>
+      </div>
+      
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+
+<script>
+  $('body').ripples({
+   imageUrl:'ripple_background_turtle.jpg',
+   waterbody:0.014,
+   resolution:512,
+   dropRadius: 20,
+   interactive: true
+  });
+ </script>
+
+<script type="text/javascript">
+  $ = function(id) {
+    return document.getElementById(id);
+  }
+
+  var show = function(id) {
+	  $(id).style.display ='block';
+  }
+  var hide = function(id) {
+	  $(id).style.display ='none';
+  }
+</script>
+
+<style>
+html {
+    height: 100%;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    background-image: url("ripple_background_turtle.jpg");
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*background: linear-gradient(#141e30, #243b55); */
+
+  }
+  .login-box .readme {
+  text-align: center;    
+  border-radius: 25px;
+  }
+  .login-box .readme .popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 400px;
+  left: 50%;
+  margin-left: -214px;
+  height: 380;
+  top: 50%;
+  margin-top: -190px;
+  background: #ffffff;
+  z-index: 20;
+  border-radius: 25px;
+
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+  border-radius: 15px;
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #ffffff;
+  z-index: -1;
+  border-radius: 5px;
+
+}
+
+.login-box .readme button {
+    position: absolute;
+    margin-top: 50px;
+    font-size: 12px;
+    padding: 10px 20px;
+    color: #968363;
+    background-color: transparent;
+    border: none;
+    grid-area: 1 / 1;
+    bottom: 14%;
+    left: 37%;
+}
+
+  .login-box .submit-button input {
+    left: 35%;
+    bottom :5%;
+    background-color: #0f0600;
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #968363;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 2px
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.login-box .readme button:hover {
+    background-color: none;
+    color: #FFF;
+    transition: all 0.3s ;
+}
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    color: rgba(0, 0, 0, 0.438);
+    
+  }
+.contact p {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+}
+  
+
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 550px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    background-color: transparent;
+    box-sizing: border-box;
+    box-shadow: 0 30px 50px rgba(0,0,0,30);
+    border-radius: 15px;
+    backdrop-filter: blur(100px);
+
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .login-box label {
+    color: white;
+    padding: 0;
+    left: 100%;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+</style>
+</html>
